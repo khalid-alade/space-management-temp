@@ -1,3 +1,27 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   eslint: {
+//     ignoreDuringBuilds: true,
+//   },
+//   typescript: {
+//     ignoreBuildErrors: true,
+//   },
+//   images: {
+//     unoptimized: true,
+//   },
+// }
+
+// export default nextConfig
+
+
+
+
+
+
+
+
+import { withNetlify } from '@netlify/next';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,6 +33,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+};
 
-export default nextConfig
+export default withNetlify(nextConfig);
